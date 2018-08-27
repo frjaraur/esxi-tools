@@ -8,8 +8,8 @@ options="$@"
 datastore=/vmfs/volumes/datastore1
 
 ls -d ${datastore}/${src} > /dev/null 2>&1 \
-|| ( echo "VM ${src} does not exist... exiting" \
-&& exit 2 )
+|| echo "VM ${src} does not exist... exiting" \
+&& exit 2 
 
 ls -d ${datastore}/${dest} > /dev/null 2>&1 \
 && echo "VM ${dest} exists, must be removed first... exiting" \
